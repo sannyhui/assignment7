@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/main_fragment.xml",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/layout/main_fragment.xml"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/main_activity.xml",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/layout/main_activity.xml"
+    }
+]

@@ -1,0 +1,6 @@
+com/example/roulette/databinding/MainActivityBinding.java
+ com.example.roulette.databinding.MainActivityBinding
+com/example/roulette/BuildConfig.java
+ com.example.roulette.BuildConfig
+com/example/roulette/databinding/MainFragmentBinding.java
+ com.example.roulette.databinding.MainFragmentBinding

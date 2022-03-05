@@ -1,0 +1,134 @@
+[
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/drawable-v24_apple.png.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/drawable-v24/apple.png"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/drawable-v24_pineapple.png.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/drawable-v24/pineapple.png"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/drawable-v24_peach.png.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/drawable-v24/peach.png"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/drawable-v24_tomato.png.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/drawable-v24/tomato.png"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/drawable-v24_strawberry.png.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/drawable-v24/strawberry.png"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/drawable-v24_kiwi.png.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/drawable-v24/kiwi.png"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/drawable-v24_cherry.png.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/drawable-v24/cherry.png"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/drawable-v24_orange.png.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/drawable-v24/orange.png"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/drawable-v24_pear.png.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/drawable-v24/pear.png"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/drawable-v24_grapes.png.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/drawable-v24/grapes.png"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/drawable-v24_lemon.png.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/drawable-v24/lemon.png"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/drawable-v24_watermelon.png.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/drawable-v24/watermelon.png"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/drawable-v24_mangosteen.png.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/drawable-v24/mangosteen.png"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/layout_main_fragment.xml.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/layout/main_fragment.xml"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/drawable-v24_mango.png.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/drawable-v24/mango.png"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/drawable-v24_banana.png.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/drawable-v24/banana.png"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/drawable-v24_durian.png.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/drawable-v24/durian.png"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/layout_main_activity.xml.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/layout/main_activity.xml"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/sannyhui/AndroidStudioProjects/roulette/app/build/intermediates/merged_res/debug/drawable-v24_blueberry.png.flat",
+        "source": "/Users/sannyhui/AndroidStudioProjects/roulette/app/src/main/res/drawable-v24/blueberry.png"
+    }
+]

@@ -8,14 +8,15 @@ import androidx.lifecycle.ViewModel
 class MainViewModel(state: SavedStateHandle) : ViewModel() {
 
     //Declare class variables
-    var totalCoins = 100 //Total Coins
+    var totalCoins = 1000 //Total Coins
     var totalBet = 0 //Total Bet
     var totalWin = 0 //Total Win
     val bet = Array(8) {i -> 0} //To store bets on fruit
     var position = 0 //Store last cursor position
+    var rouletteRunning = false //Flag to stop Onclick while Coroutine is running
 
     //To handle bet on fruit
-    fun betOnFruit(item: Int) {
+    fun betOnFruit(item: Int, quantity: Int) {
 
         //Maximum bets is 999
         if (bet[item] < 999) {
@@ -28,9 +29,9 @@ class MainViewModel(state: SavedStateHandle) : ViewModel() {
             }
 
             //Counting
-            bet[item]++
-            totalCoins--
-            totalBet++
+            bet[item] += quantity
+            totalCoins -= quantity
+            totalBet += quantity
         }
     }
 

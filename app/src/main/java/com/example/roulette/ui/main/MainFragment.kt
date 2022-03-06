@@ -3,21 +3,17 @@ package com.example.roulette.ui.main
 import android.graphics.Color
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import android.util.Log
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.lifecycle.SavedStateViewModelFactory
 import com.example.roulette.databinding.MainFragmentBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class MainFragment : Fragment() {
+class MainFragment : Fragment(){
 
     companion object {
         fun newInstance() = MainFragment()
@@ -53,7 +49,6 @@ class MainFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-
         //Instance viewModel
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
@@ -80,122 +75,130 @@ class MainFragment : Fragment() {
         //Start button onClickListener
         binding.buttonStart.setOnClickListener() {
 
-            //If totalWin > 0, add totalWin to totalCoin
-            if (viewModel.totalWin > 0) {
+            if (!viewModel.rouletteRunning) {
 
-                //Add totalWin to totalCoin
-                viewModel.collectWin()
+                //If totalWin > 0, add totalWin to totalCoin
+                if (viewModel.totalWin > 0) {
 
-                //Update fields
-                showTotalCoinAndBet()
-
-                //Update totalWin
-                binding.totalWin.text = viewModel.totalWin.toString().padStart(4,'0')
-
-                //Update text of button
-                binding.buttonStart.text = "Start"
-
-                //Update number of bet of all fruit
-                for(i in betFruit) {
-                    i.text = "000"
-                }
-
-            //If totalWin = -1, reset variables
-            } else if (viewModel.totalWin < 0) {
-
-                //Update text of button
-                binding.buttonStart.text = "Start"
-
-                //Reset totalWin to 0
-                viewModel.totalWin = 0
-
-                //Reset totalWin
-                viewModel.collectWin()
-
-                //Update fields
-                showTotalCoinAndBet()
-
-                //Update number of bet of all fruit
-                for(i in betFruit) {
-                    i.text = "000"
-                }
-            } else {
-
-                //Declare betCount
-                var betCount: Int = 0
-
-                //Sum all bets of fruit
-                for (i in 0..viewModel.bet.size - 1) {
-                    betCount += viewModel.bet[i]
-                }
-
-                //If betCount = 0 and totalCoins is equal or more than total bets of last game
-                if (viewModel.totalCoins >= betCount && viewModel.totalBet == 0) {
-
-                    //betCount = last game betCount
-                    viewModel.totalBet = betCount
-
-                    //Minus totalCoins by betCount
-                    viewModel.totalCoins -= betCount
-
-                    //Update bets of all fruists with last game betting
-                    for(i in 0..betFruit.size - 1) {
-                        betFruit[i].text = viewModel.bet[i].toString().padStart(3, '0')
-                    }
-                }
-
-                //If user select bet by themselves
-                if (viewModel.totalBet > 0) {
-
-                    //Retrieve last position
-                    val position = viewModel.position
+                    //Add totalWin to totalCoin
+                    viewModel.collectWin()
 
                     //Update fields
                     showTotalCoinAndBet()
 
-                    //Position will be re-generated.
-                    viewModel.startGame()
+                    //Update totalWin
+                    binding.totalWin.text = viewModel.totalWin.toString().padStart(4, '0')
 
-                    //Coroutine
-                    GlobalScope.launch(context= Dispatchers.Main) {
-                        //Start from last position to 31.
-                        for (i in position..31) {
-                            rotateFruit[i].setBackgroundColor(Color.parseColor("#FFFF00"))
-                            delay(60)
-                            rotateFruit[i].setBackgroundColor(Color.parseColor("#D5E4FF"))
+                    //Update text of button
+                    binding.buttonStart.text = "Start"
+
+                    //Update number of bet of all fruit
+                    for (i in betFruit) {
+                        i.text = "000"
+                    }
+
+                    //If totalWin = -1, reset variables
+                } else if (viewModel.totalWin < 0) {
+
+                    //Update text of button
+                    binding.buttonStart.text = "Start"
+
+                    //Reset totalWin to 0
+                    viewModel.totalWin = 0
+
+                    //Reset totalWin
+                    viewModel.collectWin()
+
+                    //Update fields
+                    showTotalCoinAndBet()
+
+                    //Update number of bet of all fruit
+                    for (i in betFruit) {
+                        i.text = "000"
+                    }
+                } else {
+
+                    //Declare betCount
+                    var betCount: Int = 0
+
+                    //Sum all bets of fruit
+                    for (i in 0..viewModel.bet.size - 1) {
+                        betCount += viewModel.bet[i]
+                    }
+
+                    //If betCount = 0 and totalCoins is equal or more than total bets of last game
+                    if (viewModel.totalCoins >= betCount && viewModel.totalBet == 0) {
+
+                        //betCount = last game betCount
+                        viewModel.totalBet = betCount
+
+                        //Minus totalCoins by betCount
+                        viewModel.totalCoins -= betCount
+
+                        //Update bets of all fruists with last game betting
+                        for (i in 0..betFruit.size - 1) {
+                            betFruit[i].text = viewModel.bet[i].toString().padStart(3, '0')
                         }
+                    }
 
-                        //Full loop x 1
-                        for (i in 0..0) {
-                            for (j in 0..31) {
-                                rotateFruit[j].setBackgroundColor(Color.parseColor("#FFFF00"))
-                                delay(60)
-                                rotateFruit[j].setBackgroundColor(Color.parseColor("#D5E4FF"))
-                            }
-                        }
+                    //If user select bet by themselves
+                    if (viewModel.totalBet > 0) {
 
-                        //Loop until the destination - 1
-                        if (viewModel.position != 0) {
-                            for (i in 0..viewModel.position - 1) {
-                                rotateFruit[i].setBackgroundColor(Color.parseColor("#FFFF00"))
-                                delay(60)
-                                rotateFruit[i].setBackgroundColor(Color.parseColor("#D5E4FF"))
-                            }
-                        }
-
-                        //Stay at the destination
-                        rotateFruit[viewModel.position].setBackgroundColor(Color.parseColor("#FFFF00"))
+                        //Retrieve last position
+                        val position = viewModel.position
 
                         //Update fields
                         showTotalCoinAndBet()
 
-                        //Update button description after game
-                        if (viewModel.totalWin > 0) {
-                            binding.totalWin.text = viewModel.totalWin.toString().padStart(4, '0')
-                            binding.buttonStart.text = "Collect Win Coins"
-                        } else {
+                        //Position will be re-generated.
+                        viewModel.startGame()
 
-                            binding.buttonStart.text = "Try again"
+                        //Coroutine
+                        GlobalScope.launch(context = Dispatchers.Main) {
+
+                            viewModel.rouletteRunning = true
+
+                            //Start from last position to 31.
+                            for (i in position..31) {
+                                rotateFruit[i].setBackgroundColor(Color.parseColor("#FFFF00"))
+                                delay(60)
+                                rotateFruit[i].setBackgroundColor(Color.parseColor("#D5E4FF"))
+                            }
+
+                            //Full loop x 1
+                            for (i in 0..0) {
+                                for (j in 0..31) {
+                                    rotateFruit[j].setBackgroundColor(Color.parseColor("#FFFF00"))
+                                    delay(60)
+                                    rotateFruit[j].setBackgroundColor(Color.parseColor("#D5E4FF"))
+                                }
+                            }
+
+                            //Loop until the destination - 1
+                            if (viewModel.position != 0) {
+                                for (i in 0..viewModel.position - 1) {
+                                    rotateFruit[i].setBackgroundColor(Color.parseColor("#FFFF00"))
+                                    delay(60)
+                                    rotateFruit[i].setBackgroundColor(Color.parseColor("#D5E4FF"))
+                                }
+                            }
+
+                            //Stay at the destination
+                            rotateFruit[viewModel.position].setBackgroundColor(Color.parseColor("#FFFF00"))
+
+                            //Update fields
+                            showTotalCoinAndBet()
+
+                            //Update button description after game
+                            if (viewModel.totalWin > 0) {
+                                binding.totalWin.text =
+                                    viewModel.totalWin.toString().padStart(4, '0')
+                                binding.buttonStart.text = "Collect Win Coins"
+                            } else {
+
+                                binding.buttonStart.text = "Try again"
+                            }
+                            viewModel.rouletteRunning = false
                         }
                     }
                 }
@@ -203,15 +206,15 @@ class MainFragment : Fragment() {
         }
 
         //Method for bet on Fruit
-        fun betOnItem(item: Int) {
-            //Do when totalCoin > 0
-            if (viewModel.totalCoins > 0) {
+        fun betOnItem(item: Int, quantity: Int) {
+            //Do when totalCoin >= quantity
+            if (viewModel.totalCoins >=  quantity) {
 
                 //Do when totalWin is 0 (Not > 0 or -1)
                 if (viewModel.totalWin == 0) {
 
                     //Run method in viewModel
-                    viewModel.betOnFruit(item)
+                    viewModel.betOnFruit(item, quantity)
 
                     //Update all bets on fruits
                     for (i in 0..betFruit.size - 1) {
@@ -226,28 +229,61 @@ class MainFragment : Fragment() {
 
         //Bet button listeners
         binding.buttonApple.setOnClickListener() {
-            betOnItem(0)
+            betOnItem(0, 1)
         }
         binding.buttonWaterMelon.setOnClickListener() {
-            betOnItem(1)
+            betOnItem(1, 1)
         }
         binding.buttonPineapple.setOnClickListener() {
-            betOnItem(2)
+            betOnItem(2, 1)
         }
         binding.buttonGrapes.setOnClickListener() {
-            betOnItem(3)
+            betOnItem(3, 1)
         }
         binding.buttonMangosteen.setOnClickListener() {
-            betOnItem(4)
+            betOnItem(4, 1)
         }
         binding.buttonDurian.setOnClickListener() {
-            betOnItem(5)
+            betOnItem(5, 1)
         }
         binding.buttonBlueberry.setOnClickListener() {
-            betOnItem(6)
+            betOnItem(6, 1)
         }
         binding.buttonKiwi.setOnClickListener() {
-            betOnItem(7)
+            betOnItem(7, 1)
+        }
+
+        binding.buttonApple.setOnLongClickListener {
+            betOnItem(0, 10)
+            return@setOnLongClickListener true
+        }
+        binding.buttonWaterMelon.setOnLongClickListener {
+            betOnItem(1, 10)
+            return@setOnLongClickListener true
+        }
+        binding.buttonPineapple.setOnLongClickListener {
+            betOnItem(2, 10)
+            return@setOnLongClickListener true
+        }
+        binding.buttonGrapes.setOnLongClickListener {
+            betOnItem(3, 10)
+            return@setOnLongClickListener true
+        }
+        binding.buttonMangosteen.setOnLongClickListener {
+            betOnItem(4, 10)
+            return@setOnLongClickListener true
+        }
+        binding.buttonDurian.setOnLongClickListener {
+            betOnItem(5, 10)
+            return@setOnLongClickListener true
+        }
+        binding.buttonBlueberry.setOnLongClickListener {
+            betOnItem(6, 10)
+            return@setOnLongClickListener true
+        }
+        binding.buttonKiwi.setOnLongClickListener {
+            betOnItem(7, 10)
+            return@setOnLongClickListener true
         }
     }
 }
